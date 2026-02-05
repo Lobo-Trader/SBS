@@ -1,86 +1,89 @@
 # SBS (Swing Breakout Sequence) Indicator
 
-Ein TradingView Pine Script v5 Indikator zur automatischen Erkennung von Swing Breakout Sequences.
+Ein TradingView Pine Script v5 Indikator zur automatischen Erkennung von SBS-Mustern.
 
-## 📋 Projekt-Übersicht
+## 🎯 Projekt-Ziel
 
-Dieses Projekt entwickelt einen Indikator zur Erkennung des SBS-Patterns basierend auf:
-- **Punkt 1**: Erster Swing High (nach MSB)
-- **Punkt 2**: Pullback/Retracement Low
-- **Punkt 3**: Höheres Hoch (über Punkt 1)
-- **Punkt 4**: Retracement zur 61.8% Fibonacci-Zone ⚡ **ENTRY SIGNAL**
-- **Punkt 5**: Breakout-Bestätigung über Punkt 3
+Entwicklung eines robusten Indikators, der das SBS-Muster (Swing Breakout Sequence) automatisch erkennt und signalisiert.
 
-### Trading-Regeln (Mechanisch)
-1. **SBS Pattern erkennen**
-2. **Entry bei 61.8%** Fibonacci Retracement (Punkt 3 → Punkt 2)
-3. **Stop Loss bei 100%** (Punkt 2 Level)
-4. **TP1 bei 23.6%** Fibonacci Extension
-5. **TP2 bei 0%** (Punkt 3 Level)
+## 📊 SBS-Muster Übersicht
+
+Das SBS-Muster besteht aus 5 Punkten:
+
+1. **Punkt 1**: Erster Swing High (nach MSB - Market Structure Break)
+2. **Punkt 2**: Pullback/Retracement Low
+3. **Punkt 3**: Higher High (über Punkt 1)
+4. **Punkt 4**: Retracement zur 61.8% Fibonacci-Zone ⚡ **ENTRY SIGNAL**
+5. **Punkt 5**: Breakout-Bestätigung über Punkt 3
+
+### Trading-Parameter:
+- **Entry**: 61.8% Fibonacci Retracement (Punkt 3 → Punkt 2)
+- **Stop Loss**: 100% (Punkt 2 Level)
+- **TP1**: 23.6% Fibonacci Extension
+- **TP2**: 0% (Punkt 3 Level)
 
 ## 📁 Repository-Struktur
 
 ```
 SBS/
-├── charts/                 # Chart-Beispiele
+├── charts/                  # Chart-Beispiele
 │   ├── validated/          # Bestätigte SBS-Muster
-│   ├── false-signals/      # Fehlsignale zum Lernen
+│   ├── false-signals/      # Fehlsignale
 │   └── edge-cases/         # Grenzfälle
-├── rules/                  # Regelentwicklung
+├── rules/                   # Regelwerk-Entwicklung
 │   ├── v1-initial-rules.md
 │   ├── v2-refined-rules.md
 │   └── observations.md
-├── code/                   # Pine Script Code
+├── code/                    # Pine Script Code
 │   └── sbs-indicator.pine
-├── docs/                   # Dokumentation
-│   └── pattern-analysis.md
-├── CONTRIBUTING.md
-└── README.md
+└── docs/                    # Zusätzliche Dokumentation
+    └── pattern-analysis.md
 ```
 
-## 🚀 Aktueller Status
+## 🚀 Entwicklungs-Phasen
 
-- [x] Repository erstellt
-- [x] Basis-Struktur angelegt
-- [ ] Chart-Sammlung hochladen
-- [ ] Regeln aus Charts ableiten (Phase 1)
-- [ ] Regeln verfeinern (Phase 2-N)
-- [ ] Pine Script Indikator entwickeln
-- [ ] Testing & Optimierung
+### Phase 1: Datensammlung ✅ AKTUELL
+- Chart-Beispiele hochladen und kategorisieren
+- Muster visuell analysieren
 
-## 📊 Vorgehensweise
-
-### Phase 1: Chart-Sammlung
-- Charts in entsprechende Ordner hochladen
-- Jeder Chart zeigt markierte Punkte (1, 2, 3, 4, 5)
-
-### Phase 2: Muster-Analyse
-Für jeden Chart analysieren wir:
-- Abstände zwischen Swing-Punkten
-- Fibonacci-Verhältnisse
-- Candlestick-Muster an Punkt 4
-- Trendlinien-Winkel
-- Volumen-Charakteristiken
-- Zeitliche Abstände
-
-### Phase 3: Regel-Extraktion
+### Phase 2: Regelextraktion
 - Gemeinsame Merkmale identifizieren
-- Quantitative Schwellenwerte definieren
+- Quantitative Parameter definieren
 - Edge Cases dokumentieren
 
-### Phase 4: Code-Entwicklung
-- Pine Script v5 Indikator programmieren
+### Phase 3: Code-Entwicklung
+- Pine Script v5 Implementierung
 - Backtesting mit Chart-Beispielen
-- Iterative Verbesserung
+- Optimierung
 
-## 📖 Wie Charts hochladen?
+### Phase 4: Validierung & Verfeinerung
+- Live-Testing
+- Iterative Verbesserungen
 
-Siehe [CONTRIBUTING.md](CONTRIBUTING.md) für Details.
+## 📈 Wie Charts hochladen?
+
+1. Navigiere zum entsprechenden Ordner in `charts/`
+2. Klicke auf "Add file" → "Upload files"
+3. Benenne die Datei aussagekräftig: `SYMBOL_DATUM_BESCHREIBUNG.png`
+   - Beispiel: `NQ_2026-02-03_clear-sbs.png`
+4. Füge im Commit eine kurze Beschreibung hinzu
+
+## 🔍 Was analysieren wir?
+
+Für jeden Chart extrahieren wir:
+- ✅ Abstände zwischen Punkten (in Bars/Candles)
+- ✅ Fibonacci-Verhältnisse
+- ✅ Candlestick-Muster an Punkt 4
+- ✅ Trendlinien-Winkel
+- ✅ Volumen-Charakteristiken
+- ✅ Zeitliche Muster
 
 ## 📝 Lizenz
 
-Proprietär - Alle Rechte vorbehalten
+Proprietary - Alle Rechte vorbehalten
 
 ---
 
-**Entwickelt von Lobo-Trader** 🐺📈
+**Erstellt**: 2026-02-05 13:37:24  
+**Plattform**: TradingView (Pine Script v5)  
+**Status**: 🟡 In Entwicklung
