@@ -51,7 +51,7 @@ SBS/
 ## Next Steps
 
 **Planned Activities:**
-1. Deep analysis of 25 charts
+1. Deep analysis of 25 charts A Aleksi , B Orion , C Emma , D Kat
 2. Pattern recognition & success factors
 3. Entry/Exit rules codification
 4. Statistical analysis (Fib levels, timeframes)
