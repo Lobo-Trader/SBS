@@ -1,89 +1,52 @@
-# SBS (Swing Breakout Sequence) Indicator
+# Projektbeschreibung & Best Practice: Chart-Archivierung für Mustererkennung
 
-Ein TradingView Pine Script v5 Indikator zur automatischen Erkennung von SBS-Mustern.
+## Wer ist das Team?
 
-## 🎯 Projekt-Ziel
-
-Entwicklung eines robusten Indikators, der das SBS-Muster (Swing Breakout Sequence) automatisch erkennt und signalisiert.
-
-## 📊 SBS-Muster Übersicht
-
-Das SBS-Muster besteht aus 5 Punkten:
-
-1. **Punkt 1**: Erster Swing High (nach MSB - Market Structure Break)
-2. **Punkt 2**: Pullback/Retracement Low
-3. **Punkt 3**: Higher High (über Punkt 1)
-4. **Punkt 4**: Retracement zur 61.8% Fibonacci-Zone ⚡ **ENTRY SIGNAL**
-5. **Punkt 5**: Breakout-Bestätigung über Punkt 3
-
-### Trading-Parameter:
-- **Entry**: 61.8% Fibonacci Retracement (Punkt 3 → Punkt 2)
-- **Stop Loss**: 100% (Punkt 2 Level)
-- **TP1**: 23.6% Fibonacci Extension
-- **TP2**: 0% (Punkt 3 Level)
-
-## 📁 Repository-Struktur
-
-```
-SBS/
-├── charts/                  # Chart-Beispiele
-│   ├── validated/          # Bestätigte SBS-Muster
-│   ├── false-signals/      # Fehlsignale
-│   └── edge-cases/         # Grenzfälle
-├── rules/                   # Regelwerk-Entwicklung
-│   ├── v1-initial-rules.md
-│   ├── v2-refined-rules.md
-│   └── observations.md
-├── code/                    # Pine Script Code
-│   └── sbs-indicator.pine
-└── docs/                    # Zusätzliche Dokumentation
-    └── pattern-analysis.md
-```
-
-## 🚀 Entwicklungs-Phasen
-
-### Phase 1: Datensammlung ✅ AKTUELL
-- Chart-Beispiele hochladen und kategorisieren
-- Muster visuell analysieren
-
-### Phase 2: Regelextraktion
-- Gemeinsame Merkmale identifizieren
-- Quantitative Parameter definieren
-- Edge Cases dokumentieren
-
-### Phase 3: Code-Entwicklung
-- Pine Script v5 Implementierung
-- Backtesting mit Chart-Beispielen
-- Optimierung
-
-### Phase 4: Validierung & Verfeinerung
-- Live-Testing
-- Iterative Verbesserungen
-
-## 📈 Wie Charts hochladen?
-
-1. Navigiere zum entsprechenden Ordner in `charts/`
-2. Klicke auf "Add file" → "Upload files"
-3. Benenne die Datei aussagekräftig: `SYMBOL_DATUM_BESCHREIBUNG.png`
-   - Beispiel: `NQ_2026-02-03_clear-sbs.png`
-4. Füge im Commit eine kurze Beschreibung hinzu
-
-## 🔍 Was analysieren wir?
-
-Für jeden Chart extrahieren wir:
-- ✅ Abstände zwischen Punkten (in Bars/Candles)
-- ✅ Fibonacci-Verhältnisse
-- ✅ Candlestick-Muster an Punkt 4
-- ✅ Trendlinien-Winkel
-- ✅ Volumen-Charakteristiken
-- ✅ Zeitliche Muster
-
-## 📝 Lizenz
-
-Proprietary - Alle Rechte vorbehalten
+Das Team besteht ausschließlich aus:
+- Wolfgang (Lobo-Trader) – Trader, Strategie-Owner, Mensch
+- Nova – Copilot, KI-Unterstützung, Doku/Analyse/Entwicklung
 
 ---
 
-**Erstellt**: 2026-02-05 13:37:24  
-**Plattform**: TradingView (Pine Script v5)  
-**Status**: 🟡 In Entwicklung
+## Warum „Gold-Charts“ festhalten?
+
+Für die Entwicklung und Validierung der Mustererkennungs-Logik im SBS-Projekt nutzen wir gezielt besonders klare („schöne“) Chart-Beispiele aus der Praxis. Das dient mehreren Zielen:
+- Teststandard: Diese Muster sind maßgeblich für die Qualitätssicherung jedes Codes/Regelwerks.
+- Referenz: Jeder Zeitpunkt und Markt, an dem ein Muster auftritt, wird dokumentiert – für spätere Analysen, internes Review oder Schulung.
+- Objektivierung: An diesen Beispielen prüfen wir, ob Nova oder Wolfgang die Regeln korrekt anwenden.
+
+## Vorgehen und Archiv-Struktur
+
+1. Beispielauswahl & Katalogisierung:  
+   - Wolfgang und Nova können „vorbildliche“ Muster-Charts vorschlagen (SBS1, SBS2, Edge Cases etc.).
+   - Zu jedem Beispiel wird dokumentiert:
+     - Instrument/Markt, Zeitrahmen, Zeitstempel
+     - Typ (SBS1, SBS2, Sonderfall)
+     - Screenshot/Chartdatei
+     - Kurzkommentar (Warum ist dies ein Musterbeispiel?)
+
+2. Testfall-Liste im Repository:  
+   - Tabellarisch gepflegt (Markdown-Tabelle oder CSV), Beispielstruktur:
+
+     | Chart/Screenshot     | Zeitpunkt / Markt      | Timeframe | SBS-Typ | Besonderheit/Kommentar      |
+     |---------------------|-----------------------|-----------|---------|----------------------------|
+     | sbs1_dax_2023_05.png| DAX, 2023-05-01, M15  | M15       | SBS1    | Klassischer sauberer Long  |
+     | sbs2_nq_1h_2022.png | NASDAQ, 2022-11-10, H1| H1        | SBS2    | SBS2-Sequenz vor MSB       |
+
+3. Nutzung für Test-Driven-Development (TDD):
+   - Jede Logik und jedes Regelmodul muss die Fälle korrekt erkennen.
+   - Fehler/Missmatches werden direkt am Chart rückgeprüft.
+   - Neue Muster, entdeckt durch Wolfgang oder Nova, laufend ergänzen.
+
+4. Kontinuierlicher Ausbau:
+   - Besonders gute neue Muster und Edge Cases kommen regelmäßig ins Archiv.
+   - Entwicklung, Review & Dokumentation bauen darauf auf („Kultur der Best Practice Beispiele“).
+
+---
+
+Hinweis:  
+Ab sofort ergänzen Nova (als Copilot) und Wolfgang bei allen Chartanalysen Musterkommentare, führen das Chart-Archiv und entwickeln das Regelwerk gemeinsam weiter!
+
+---
+
+(Dieser Abschnitt steht als Leitlinie und Best Practice oben in der Projektbeschreibung und gilt exklusiv für „Wolfgang & Nova“).
