@@ -1,12 +1,16 @@
+# Block 3: Multi-TF, visuelles System, Varianten, Checkliste, Vergleich UserA/UserB
 
+## Multi-TF
+Hier können die verschiedenen Zeitfenster (Timeframes) aufgelistet werden, die im System unterstützt werden.
 
-## Block 2
+## Visuelles System
+Eine Beschreibung des visuellen Systems, das zur Analyse von Marktdaten verwendet wird.
 
-### 4. Structure-First vs. MSB-First
-Details about Structure-First and MSB-First strategies here...
+## Varianten
+Eine Übersicht der verschiedenen Varianten, die zur Analyse zur Verfügung stehen.
 
-### 5. Fibonacci-Anwendung
-Details about Fibonacci application in trading strategies...
+## Checkliste
+Eine Checkliste mit wichtigen Punkten zur Überprüfung, bevor eine Analyse durchgeführt wird.
 
-### 6. Entry-Strategien
-Details about entry strategies based on the discussed methodologies...
+## Vergleich UserA/UserB
+Einen Vergleich der Ergebnisse zwischen UserA und UserB, um die Leistung zu bewerten.
