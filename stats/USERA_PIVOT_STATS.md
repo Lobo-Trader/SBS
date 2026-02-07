@@ -1,1 +1,1 @@
-<inhalte der USERA_PIVOT_STATS.md>
+Content of USERA_PIVOT_STATS.md
