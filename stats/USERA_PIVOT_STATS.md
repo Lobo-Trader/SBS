@@ -1,1 +1,0 @@
-Content of USERA_PIVOT_STATS.md
