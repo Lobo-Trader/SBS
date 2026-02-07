@@ -1,5 +1,14 @@
 # Pivot- und TP-Statistik – User C (Emma)
 
+> **Hinweis zu dieser Auswertung:**  
+> Die Charts und Beispiele in diesem Dokument stammen – wie im Forum üblich – aus den von Usern freiwillig eingereichten „besten“ Beispielen (Best-Case-Bias). Dieses Ergebnis repräsentiert also NICHT den Durchschnitt aller realen Trades, sondern ist ein bewusst optimistischer Ausschnitt.  
+> Selbst im „Best-of“-Modus treten verfehlte TakeProfits und große Streuung auf – das ist normal und spiegelt sogar die Obergrenze des Möglichen wider.  
+> 
+> **Zitat unseres Lehrers:**  
+> „Die drei Dinge, die ihr kontrollieren könnt, sind das Risiko des Trades, der Eintrittspreis und der Exitpreis des Trades – aber NIEMALS den zukünftigen Kursverlauf.“
+
+---
+
 > **⚠️ Achtung P5-Problem:**  
 > **Die Definition von Pivot 5 (P5) ist NICHT eindeutig!**  
 > In den analysierten Clips wird P5 teils mit dem 50 %-Retracement, teils mit dem 61,8 %-Retracement assoziiert. Die Auswahl wirkt inkonsistent und ist im Regelwerk/Video nicht klar spezifiziert.  
