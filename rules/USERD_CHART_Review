@@ -1,0 +1,26 @@
+| #  | Image  | SBS-Typ (Long/Short) | SBS1/SBS2 | Besonderheiten/Musterkommentar     | Gold-Chart? |
+|----|--------|----------------------|-----------|------------------------------------|-------------|
+|  1 |   1    | Long                 | SBS1      | Sweep of SBS, 15-sec Entry at UMO, klarer Trigger | ✅           |
+|  2 |   2    | Long                 | SBS1      | SBS Sweep at 50%, Expansion + Konsolidierung, Entry 0.618 | ❓           |
+|  3 |   3    | Long                 | SBS1      | UMO Support, Saucer Pattern, SBS Sweep, Entry UMO/SNDr | ✅           |
+|  4 |   4    | Long                 | SBS1      | Sweep of 1min SBS, Fib Trigger BOS, Entry UMO | ✅           |
+|  5 |   5    | Long                 | SBS1/SBS2 | SBS Sweep 0.5, Expansion/Konsolidierung, Entry 0.618 | ❓           |
+|  6 |   6    | Long                 | SBS1      | Sweep of SBS, Entry 15-sec after bullish displacement | ✅           |
+|  7 |   7    | Short                | SBS2      | SWEEP of Highs, 15-sec UMO & SNDr, SMA bearish cross | ✅           |
+|  8 |   8    | Long                 | SBS1      | Sweep 5-min SBS, 1-min UMO, Expansion, Trigger | ✅           |
+|  9 |   9    | Long                 | SBS1      | Bullish SBS, Pullback 0.618, Target 4.236 extension | ✅           |
+| 10 |  10    | Long                 | SBS1      | SBS Sweep bei 50%, Expansion, Konsolidierung | ❓           |
+| 11 |  11    | Long                 | SBS1/SBS2 | Entry nach 1-min SBS, Fib-Trigger, Expansion  | ❓           |
+| 12 |  12    | Long                 | SBS1      | Klassischer SBS1 Long, Bestätigung am 0.618 | ✅           |
+| 13 |  13    | Long                 | SBS1      | Sweep, starker Up-Move, Expansion | ❓           |
+| 14 |  14    | Long                 | SBS1      | Klare SBS-Struktur, starker bullischer Move | ✅           |
+| 15 |  15    | Short                | SBS2      | Sweep & 0.618 Entry, Down Move, Fib-Trigger | ✅           |
+| 16 |  16    | Short                | SBS2      | 5er Struktur, klassischer SBS2 Downmove | ❓           |
+| 17 |  17    | Long                 | SBS1      | Klarer SBS1 Long, Expansion, Trigger | ❓           |
+| 18 |  18    | Long                 | SBS1      | SBS Sweep, Fib, Entry am 0.618 | ❓           |
+| 19 |  19    | Short                | SBS2      | SBS2 Short-Entry, starker Downmove, Fib | ✅           |
+| 20 |  20    | Short                | SBS2      | SBS2 Short, starker Downmove | ❓           |
+| 21 |  21    | Long                 | SBS1      | Klarer SBS1, schöne Expansion | ❓           |
+| 22 |  22    | Long                 | SBS1      | Gold-Chart: SBS1 Long, saubere Struktur | ✅           |
+| 23 |  23    | Short                | SBS2      | SBS2 Short, starker Fib Move | ✅           |
+| 24 |  24    | Short                | SBS2      | SBS2 Short, starker Downmove, Expansion | ❓           |
