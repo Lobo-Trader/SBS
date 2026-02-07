@@ -1,3 +1,0 @@
-# USERB_PIVOT_STATS
-
-Content of USERB_PIVOT_STATS.md goes here...
