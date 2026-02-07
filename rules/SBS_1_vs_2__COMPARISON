@@ -1,1 +1,24 @@
+# SBS1 vs. SBS2 – Mustervergleich (StoicEdge Richtlinie)
 
+| Kriterium                    | SBS2 (Vorlauf/Lead-In)                          | SBS1 (nach MSB/Strukturbruch)                  |
+|------------------------------|-------------------------------------------------|------------------------------------------------|
+| Reihenfolge/Start            | Entsteht vor dem Strukturbruch (MSB/BOS)        | Entsteht **nach** dem Strukturbruch (MSB/BOS)  |
+| Pivot-Bildung                | Viele kleine Swings/Pivots ohne MSB             | Größere, markante Pivots nach MSB              |
+| Beschriftung im Chart        | Kleine Zahlen (subwellig, EW-Stil)              | Große Zahlen (Hauptsequenz)                    |
+| Exaktheit/Flexibilität       | Daumenregel (Sequenz ähnlich, Punkte variabel)  | Struktur/Regeln klar, aber adaptiv             |
+| Lage von Punkt 4/5           | Typisch auf Höhe des alten Hochs (Daumenwert)   | Punkt 5 oft Retest der SBS2-Ursprungszone (UMO)|
+| Marktstrukturbruch           | Kein MSB, bleibt in Range, bereitet Liquidität  | BOS/MSB clear – markanter Break & Imbalance    |
+| Transition zu SBS1           | Trigger: MSB/Pivotbruch („große Ziffer setzt“)  | Beginnt direkt ab MSB mit SBS1-Schrittfolge    |
+| Entry-/Exitzonen             | Entry selten, selten Hauptziel                  | Entry nach Flip (Sweep/Trigger/Entry), Target klar |
+| Anwendung/Visualisierung     | Liquiditätsaufbau, Kontext für SBS1             | Hauptmuster für Entry, Target, Exit            |
+| Wichtigkeit im Regelwerk     | Richtlinie, nicht zu pip-genau                  | Kernprozesse, adaptiv, aber systematisch       |
+
+---
+
+**Fazit:**  
+- SBS2 ist das „Vorlauf-/Nesting-Szenario“, das die Marktstruktur vorbereitet – viele Chancen, aber Entrymechanik für „das große Setup“ erst nach MSB (SBS1).
+- SBS1 setzt die eigentliche Mustersequenz in Gang, immer nach MSB/BOS – hier wird strategisch getradet und das Regelwerk greift am stärksten.
+
+---
+
+*(Diese Übersicht kann als eigenständige Datei (z.B. SBS_COMPARISON.md) ins Repo oder in das Hauptregelwerk für Mustererkennung integriert werden.)*
