@@ -1,5 +1,5 @@
-# Projektbeschreibung & Best Practice: Chart-Archivierung für Mustererkennung SBS
-SBS (Swing Breakout Sequence) Pattern Trading
+# Projektbeschreibung & Best Practice: Chart-Archivierung für Mustererkennung SBS(Swing Breakout Sequence)
+
 
 ## Wer ist das Team?
 
