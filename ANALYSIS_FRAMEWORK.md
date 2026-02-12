@@ -1,4 +1,4 @@
-# SBS Pattern Analysis Framework
+# SBS Pattern Analysis Framework (Swing Breakout Sequence)
 
 ## Analysis Structure
 
