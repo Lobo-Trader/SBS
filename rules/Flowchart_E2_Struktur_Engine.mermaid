@@ -1,0 +1,50 @@
+flowchart TD
+    A([Valider Pivot von Ebene 1]) --> B{Pivot Low\noder High?}
+
+    B -- Low --> C{Liegt Low\nunter aktuellem\nProtected Low?}
+    B -- High --> D{Liegt High\nueber aktuellem\nProtected High?}
+
+    C -- Ja --> E[Neues potenzielles\nProtected Low\ngestrichelt markieren]
+    C -- Nein --> F[Low als\nX-Pivot behandeln\nignorieren]
+
+    D -- Ja --> G[Neues potenzielles\nProtected High\ngestrichelt markieren]
+    D -- Nein --> H[High als\nX-Pivot behandeln\nignorieren]
+
+    E --> I{BOS nach oben?\nClose ueber\nvorheriges PH?}
+    G --> J{BOS nach unten?\nClose unter\nvorheriges PL?}
+
+    I -- Nein --> K[Warten\nPotential bleibt aktiv]
+    I -- Ja --> L[Protected Low\nbestaetigt\ndurchgezogen markieren]
+
+    J -- Nein --> M[Warten\nPotential bleibt aktiv]
+    J -- Ja --> N[Protected High\nbestaetigt\ndurchgezogen markieren]
+
+    L --> O{Vorheriges\nProtected Low\nnoch aktiv?}
+    N --> P{Vorheriges\nProtected High\nnoch aktiv?}
+
+    O -- Ja --> Q[Altes PL\nde-priorisieren\nals S/R behalten]
+    O -- Nein --> R[Bullish Order Flow\nbestaetigt\nan Fib Engine]
+
+    P -- Ja --> S[Altes PH\nde-priorisieren\nals S/R behalten]
+    P -- Nein --> T[Bearish Order Flow\nbestaetigt\nan Fib Engine]
+
+    R --> U{Aktuelles PL\ngebrochen?}
+    T --> V{Aktuelles PH\ngebrochen?}
+
+    U -- Ja --> W[Bullish Order Flow\ninvalidiert\nNeue Struktur pruefen]
+    U -- Nein --> X[Order Flow\nbleibt aktiv]
+
+    V -- Ja --> Y[Bearish Order Flow\ninvalidiert\nNeue Struktur pruefen]
+    V -- Nein --> Z[Order Flow\nbleibt aktiv]
+
+    style A fill:#2d2d2d,color:#fff
+    style L fill:#a5d6a7,color:#000
+    style N fill:#ffcdd2,color:#000
+    style R fill:#a5d6a7,color:#000
+    style T fill:#ffcdd2,color:#000
+    style W fill:#ff8a80,color:#000
+    style Y fill:#ff8a80,color:#000
+    style F fill:#eeeeee,color:#000
+    style H fill:#eeeeee,color:#000
+    style K fill:#fff9c4,color:#000
+    style M fill:#fff9c4,color:#000
