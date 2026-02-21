@@ -1,0 +1,58 @@
+flowchart TD
+    A([Order Flow von Ebene 2\nBullish oder Bearish]) --> B{Order Flow\nRichtung?}
+
+    B -- Bullish --> C[Fib spannen\nVon Protected Low\nzu Protected High]
+    B -- Bearish --> D[Fib spannen\nVon Protected High\nzu Protected Low]
+
+    C --> E[Berechne Levels\n50% und 61.8%\nDiscount Zone]
+    D --> F[Berechne Levels\n50% und 61.8%\nPremium Zone]
+
+    E --> G{Aktueller Preis\nrelativ zu 50%?}
+    F --> G
+
+    G -- Preis ueber 50%\nBullish --> H[PREMIUM\nKein Entry Long\nAnti-FOMO aktiv]
+    G -- Preis unter 50%\nBullish --> I[DISCOUNT\nEntry Zone aktiv]
+    G -- Preis ueber 50%\nBearish --> J[DISCOUNT\nEntry Zone aktiv]
+    G -- Preis unter 50%\nBearish --> K[PREMIUM\nKein Entry Short\nAnti-FOMO aktiv]
+
+    I --> L{Preis bei\n61.8% Golden Zone?}
+    J --> M{Preis bei\n61.8% Golden Zone?}
+
+    L -- Ja --> N[Primaerer Entry\nGolden Zone Long]
+    L -- Nein --> O{Preis bei\n50%?}
+
+    M -- Ja --> P[Primaerer Entry\nGolden Zone Short]
+    M -- Nein --> Q{Preis bei\n50%?}
+
+    O -- Ja --> R[Sekundaerer Entry\n50% Long]
+    O -- Nein --> S[Warten auf\nEntry Zone]
+
+    Q -- Ja --> T[Sekundaerer Entry\n50% Short]
+    Q -- Nein --> U[Warten auf\nEntry Zone]
+
+    N --> V[An Signal Engine\nEbene 4]
+    R --> V
+    P --> V
+    T --> V
+
+    H --> W[Warten auf\nRetracement]
+    K --> W
+
+    V --> X[SL und TP\nberechnen]
+    X --> Y[SL unter PL\nbzw ueber PH\nTP bei 23.6% min\nZiel 0%]
+
+    Y --> Z([An Signal Engine\nEbene 4 weitergeben])
+
+    style A fill:#2d2d2d,color:#fff
+    style H fill:#ffcdd2,color:#000
+    style K fill:#ffcdd2,color:#000
+    style I fill:#c8e6c9,color:#000
+    style J fill:#c8e6c9,color:#000
+    style N fill:#a5d6a7,color:#000
+    style P fill:#ffcdd2,color:#000
+    style R fill:#a5d6a7,color:#000
+    style T fill:#ffcdd2,color:#000
+    style S fill:#fff9c4,color:#000
+    style U fill:#fff9c4,color:#000
+    style W fill:#fff9c4,color:#000
+    style Z fill:#2d2d2d,color:#fff
