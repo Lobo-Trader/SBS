@@ -1,0 +1,59 @@
+flowchart TD
+    A([Entry Zone von Ebene 3\nSL und TP bekannt]) --> B[RR Berechnung\n23.6% zu SL]
+
+    B --> C{RR bei 23.6%\nminimal 1 zu 1?}
+
+    C -- Nein --> D[Setup verworfen\nKein Signal]
+    C -- Ja --> E[RR Bedingung\nerfullt]
+
+    E --> F{Multi-TF Check\nHTF Order Flow?}
+
+    F -- HTF Bullish\nLTF Bullish --> G[Starkes Signal\nAlignment beider TF]
+    F -- HTF Bearish\nLTF Bearish --> H[Starkes Signal\nAlignment beider TF]
+    F -- HTF Bullish\nLTF Bearish --> I[AMBIGUITY WARNING\nZwei gueltige Szenarien\nVorsicht]
+    F -- HTF Bearish\nLTF Bullish --> I
+    F -- HTF pending\nLTF bestaetigt --> I
+
+    G --> J{Preis in\nDiscount Zone\nLong?}
+    H --> K{Preis in\nPremium Zone\nShort?}
+    I --> L[Warning ausgeben\nTrader entscheidet]
+
+    J -- Ja --> M[LONG SIGNAL\nLimit Order\nbei 50% oder 61.8%]
+    J -- Nein --> N[Warten auf\nRetracement]
+
+    K -- Ja --> O[SHORT SIGNAL\nLimit Order\nbei 50% oder 61.8%]
+    K -- Nein --> P[Warten auf\nRetracement]
+
+    M --> Q[Exit Strategie\n1/3 bei RR 1 zu 1\n2/3 bei RR 1 zu 2\n3/3 Runner naechstes HTF]
+    O --> Q
+
+    Q --> R{Range\nDetektiert?}
+
+    R -- Ja --> S[RANGE SIGNAL\nKein direktionales\nSignal]
+    R -- Nein --> T[Signal aktiv\nbis SL oder TP]
+
+    T --> U{SL getroffen?}
+    T --> V{TP getroffen?}
+
+    U -- Ja --> W[Trade geschlossen\nVerlust\nNeue Struktur pruefen]
+    V -- Ja --> X[1/3 geschlossen\nRR 1 zu 1 erreicht\nSL auf Breakeven]
+
+    X --> Y{RR 1 zu 2\nerreicht?}
+    Y -- Ja --> Z[2/3 geschlossen\nB und B gesichert\nRunner laeuft]
+    Y -- Nein --> T
+
+    Z --> AA{Naechstes\nHTF Ziel\nerreicht?}
+    AA -- Ja --> AB([Runner geschlossen\nKirsche auf der\nSahnetorte])
+    AA -- Nein --> Z
+
+    style A fill:#2d2d2d,color:#fff
+    style D fill:#ffcdd2,color:#000
+    style G fill:#a5d6a7,color:#000
+    style H fill:#ffcdd2,color:#000
+    style I fill:#fff9c4,color:#000
+    style L fill:#fff9c4,color:#000
+    style M fill:#a5d6a7,color:#000
+    style O fill:#ffcdd2,color:#000
+    style S fill:#e3f2fd,color:#000
+    style W fill:#ff8a80,color:#000
+    style AB fill:#a5d6a7,color:#000
